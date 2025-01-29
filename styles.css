@@ -1,8 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rajdhani:wght@300;400;500;600;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oxanium:wght@200..800&family=Rajdhani:wght@300;400;500;600;700&display=swap");
+
 /* General Styles */
 body {
   margin: 0;
   padding: 0;
-  font-family: "Arial", sans-serif;
+  font-family: "Montserrat", sans-serif;
   background: radial-gradient(circle at center, #2c3e50, #000);
 }
 
@@ -11,6 +17,7 @@ body {
   transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   background: rgba(0, 0, 0, 0.6); /* Translucent background */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: "Oxanium", sans-serif;
 }
 
 .navbar-dark .navbar-brand {
@@ -268,7 +275,7 @@ p {
   height: 60px;
   padding: 10px;
   width: 100%;
-  font-family: "poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   padding-left: 30px;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -475,7 +482,7 @@ p {
   background-color: #101010; /* Rich dark tone for a sleek look */
   padding: 60px 0;
   color: #b5b5b5;
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .footer-heading {
