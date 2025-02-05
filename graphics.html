@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Dreamworks Agency</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <link rel="icon" href="logo.png" type="image/icon type" />
+    <style>
+      .modal-open .navbar {
+        display: none;
+      }
+
+      /* Make images clickable */
+      .portfolio1-image {
+        cursor: pointer; /* Changes to a hand when hovering */
+      }
+      /* Modal Background */
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Modal Content (Image) */
+      .modal-content {
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 5px;
+        object-fit: contain;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      /* Close Button */
+      .close {
+        position: absolute;
+        top: 15px; /* Adjusted for better alignment */
+        right: 20px; /* Keeps it inside the modal */
+        font-size: 40px;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+        padding: 10px; /* Makes the click area larger */
+        line-height: 1;
+      }
+
+      .close:hover {
+        color: #ff0000;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="./index.html"
+          >Digital Dreamworks Agency</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./marketting.html">Marketing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./seo.html">SEO</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section id="portfolio1-details" class="portfolio1-section">
+      <div class="container">
+        <div class="section-title text-center">
+          <h2 class="display-5 text-light mb-4 page-heading">Our Portfolio</h2>
+          <p>
+            Take a closer look at some of our projects, showcasing our expertise
+            and creative capabilities.
+          </p>
+        </div>
+
+        <div class="row">
+          <!-- Portfolio Item 1 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="portfolio1-card">
+              <img
+                src="https://i.postimg.cc/Jz3nd0FM/1-1.jpg"
+                class="portfolio1-image"
+                onclick="openModal(this)"
+              />
+            </div>
+          </div>
+
+          <!-- Portfolio Item 2 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="portfolio1-card">
+              <img
+                src="https://i.postimg.cc/vTLY2SPX/1-10.jpg"
+                class="portfolio1-image"
+                onclick="openModal(this)"
+              />
+            </div>
+          </div>
+
+          <!-- Portfolio Item 3 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="portfolio1-card">
+              <img
+                src="https://i.postimg.cc/7PTTnHqY/1-11.jpg"
+                class="portfolio1-image"
+                onclick="openModal(this)"
+              />
+            </div>
+          </div>
+
+          <!-- Portfolio Item 4 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="portfolio1-card">
+              <img
+                src="https://i.postimg.cc/Dyk4C9zQ/1-12.jpg"
+                class="portfolio1-image"
+                onclick="openModal(this)"
+              />
+            </div>
+          </div>
+
+          <!-- Portfolio Item 5 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="portfolio1-card">
+              <img
+                src="https://i.postimg.cc/y86dtsCR/1-13.jpg"
+                class="portfolio1-image"
+                onclick="openModal(this)"
+              />
+            </div>
+          </div>
+
+          <!-- Portfolio Item 6 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="portfolio1-card">
+              <img
+                src="https://i.postimg.cc/6qdqJQQr/1-14.jpg"
+                class="portfolio1-image"
+                onclick="openModal(this)"
+              />
+            </div>
+          </div>
+
+          <!-- Portfolio Item 6 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="portfolio1-card">
+              <img
+                src="https://i.postimg.cc/13WtZ2yj/1-15.jpg"
+                class="portfolio1-image"
+                onclick="openModal(this)"
+              />
+            </div>
+          </div>
+          <!-- Portfolio Item 6 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="portfolio1-card">
+              <img
+                src="https://i.postimg.cc/QMHMNmtx/1-16.jpg"
+                class="portfolio1-image"
+                onclick="openModal(this)"
+              />
+            </div>
+          </div>
+          <!-- Portfolio Item 6
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="portfolio1-card">
+              <img
+                src="https://i.postimg.cc/4NP4zqHx/1-17.jpg"
+                class="portfolio1-image"
+                onclick="openModal(this)"
+              />
+            </div>
+          </div> -->
+          <!-- Portfolio Item 6 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="portfolio1-card">
+              <img
+                src="https://i.postimg.cc/1tF5wzwk/1-18.jpg"
+                class="portfolio1-image"
+                onclick="openModal(this)"
+              />
+            </div>
+          </div>
+          <!-- Portfolio Item 6 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="portfolio1-card">
+              <img
+                src="https://i.postimg.cc/QdM8Smck/1-19.jpg"
+                class="portfolio1-image"
+                onclick="openModal(this)"
+              />
+            </div>
+          </div>
+          <!-- Portfolio Item 6 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="portfolio1-card">
+              <img
+                src="https://i.postimg.cc/pLMrZzqs/1-2.jpg"
+                class="portfolio1-image"
+                onclick="openModal(this)"
+              />
+            </div>
+          </div>
+          <!-- Portfolio Item 6 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="portfolio1-card">
+              <img
+                src="https://i.postimg.cc/3JYJ0YRq/1-20.jpg"
+                class="portfolio1-image"
+                onclick="openModal(this)"
+              />
+            </div>
+          </div>
+          <!-- Portfolio Item 6 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="portfolio1-card">
+              <img
+                src="https://i.postimg.cc/Kztx4HyF/1-21.jpg"
+                class="portfolio1-image"
+                onclick="openModal(this)"
+              />
+            </div>
+          </div>
+          <!-- Portfolio Item 6 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="portfolio1-card">
+              <img
+                src="https://i.postimg.cc/MGCz68Nd/1-22.jpg"
+                class="portfolio1-image"
+                onclick="openModal(this)"
+              />
+            </div>
+          </div>
+          <!-- Portfolio Item 6 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="portfolio1-card">
+              <img
+                src="https://i.postimg.cc/1zn91zC8/1-23.jpg"
+                class="portfolio1-image"
+                onclick="openModal(this)"
+              />
+            </div>
+          </div>
+          <!-- Portfolio Item 6 
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="portfolio1-card">
+              <img
+                src="https://i.postimg.cc/GtrrDxcD/1-24.jpg"
+                class="portfolio1-image"
+                onclick="openModal(this)"
+              />
+            </div>
+          </div> -->
+          <!-- Portfolio Item 6 
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="portfolio1-card">
+              <img
+                src="https://i.postimg.cc/tRt9jw5N/1-25.jpg"
+                class="portfolio1-image"
+                onclick="openModal(this)"
+              />
+            </div>
+          </div> -->
+          <!-- Portfolio Item 6 
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="portfolio1-card">
+              <img
+                src="https://i.postimg.cc/nc3ZsmNs/1-26.jpg"
+                class="portfolio1-image"
+                onclick="openModal(this)"
+              />
+            </div>
+          </div> -->
+          <!-- Portfolio Item 6 
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="portfolio1-card">
+              <img
+                src="https://i.postimg.cc/ZqdhDMn3/1-27.jpg"
+                class="portfolio1-image"
+                onclick="openModal(this)"
+              />
+            </div>
+          </div> -->
+          <!-- Portfolio Item 6 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="portfolio1-card">
+              <img
+                src="https://i.postimg.cc/2S3Yn6f0/1-28.jpg"
+                class="portfolio1-image"
+                onclick="openModal(this)"
+              />
+            </div>
+          </div>
+          <!-- Portfolio Item 6 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="portfolio1-card">
+              <img
+                src="https://i.postimg.cc/26Dg9jPR/1-29.jpg"
+                class="portfolio1-image"
+                onclick="openModal(this)"
+              />
+            </div>
+          </div>
+          <!-- Portfolio Item 6 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="portfolio1-card">
+              <img
+                src="https://i.postimg.cc/g0N0m5d7/1-3.jpg"
+                class="portfolio1-image"
+                onclick="openModal(this)"
+              />
+            </div>
+          </div>
+          <!-- Portfolio Item 6 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="portfolio1-card">
+              <img
+                src="https://i.postimg.cc/1RH1T6mW/1-30.jpg"
+                class="portfolio1-image"
+                onclick="openModal(this)"
+              />
+            </div>
+          </div>
+          <!-- Portfolio Item 6 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="portfolio1-card">
+              <img
+                src="https://i.postimg.cc/zfW9kH2F/1-31.jpg"
+                class="portfolio1-image"
+                onclick="openModal(this)"
+              />
+            </div>
+          </div>
+          <!-- Portfolio Item 6 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="portfolio1-card">
+              <img
+                src="https://i.postimg.cc/k4NP7Rxg/1-32.jpg"
+                class="portfolio1-image"
+                onclick="openModal(this)"
+              />
+            </div>
+          </div>
+          <!-- Portfolio Item 6 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="portfolio1-card">
+              <img
+                src="https://i.postimg.cc/66zFzXcg/1-33.jpg"
+                class="portfolio1-image"
+                onclick="openModal(this)"
+              />
+            </div>
+          </div>
+          <!-- Portfolio Item 6 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="portfolio1-card">
+              <img
+                src="https://i.postimg.cc/DwWV8MqD/1-34.jpg"
+                class="portfolio1-image"
+                onclick="openModal(this)"
+              />
+            </div>
+          </div>
+          <!-- Portfolio Item 6 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="portfolio1-card">
+              <img
+                src="https://i.postimg.cc/JzSfJ5xh/1-35.jpg"
+                class="portfolio1-image"
+                onclick="openModal(this)"
+              />
+            </div>
+          </div>
+          <!-- Portfolio Item 6 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="portfolio1-card">
+              <img
+                src="https://i.postimg.cc/NFGSYJsd/1-36.jpg"
+                class="portfolio1-image"
+                onclick="openModal(this)"
+              />
+            </div>
+          </div>
+          <!-- Portfolio Item 6 
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="portfolio1-card">
+              <img
+                src="https://i.postimg.cc/6qHSQrTt/1-37.jpg"
+                class="portfolio1-image"
+                onclick="openModal(this)"
+              />
+            </div>
+          </div> -->
+          <!-- Portfolio Item 6 
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="portfolio1-card">
+              <img
+                src="https://i.postimg.cc/bNJWBBFJ/1-38.jpg"
+                class="portfolio1-image"
+                onclick="openModal(this)"
+              />
+            </div>
+          </div> -->
+          <!-- Portfolio Item 6 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="portfolio1-card">
+              <img
+                src="https://i.postimg.cc/6p4S9GKx/1-39.jpg"
+                class="portfolio1-image"
+                onclick="openModal(this)"
+              />
+            </div>
+          </div>
+          <!-- Portfolio Item 6 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="portfolio1-card">
+              <img
+                src="https://i.postimg.cc/W423RjRr/1-4.jpg"
+                class="portfolio1-image"
+                onclick="openModal(this)"
+              />
+            </div>
+          </div>
+          <!-- Portfolio Item 6 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="portfolio1-card">
+              <img
+                src="https://i.postimg.cc/KcsJRvJG/1-40.jpg"
+                class="portfolio1-image"
+                onclick="openModal(this)"
+              />
+            </div>
+          </div>
+          <!-- Portfolio Item 6 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="portfolio1-card">
+              <img
+                src="https://i.postimg.cc/J0d68Rdh/1-41.jpg"
+                class="portfolio1-image"
+                onclick="openModal(this)"
+              />
+            </div>
+          </div>
+          <!-- Portfolio Item 6 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="portfolio1-card">
+              <img
+                src="https://i.postimg.cc/25fHrcTn/1-42.jpg"
+                class="portfolio1-image"
+                onclick="openModal(this)"
+              />
+            </div>
+          </div>
+          <!-- Portfolio Item 6 
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="portfolio1-card">
+              <img
+                src="https://i.postimg.cc/Rh8R8XN6/1-43.jpg"
+                class="portfolio1-image"
+                onclick="openModal(this)"
+              />
+            </div>
+          </div> -->
+          <!-- Portfolio Item 6 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="portfolio1-card">
+              <img
+                src="https://i.postimg.cc/DyJ5skMq/1-44.jpg"
+                class="portfolio1-image"
+                onclick="openModal(this)"
+              />
+            </div>
+          </div>
+          <!-- Portfolio Item 6 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="portfolio1-card">
+              <img
+                src="https://i.postimg.cc/xdYPWkTR/1-45.jpg"
+                class="portfolio1-image"
+                onclick="openModal(this)"
+              />
+            </div>
+          </div>
+          <!-- Portfolio Item 6 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="portfolio1-card">
+              <img
+                src="https://i.postimg.cc/QMbqsXFr/1-46.jpg"
+                class="portfolio1-image"
+                onclick="openModal(this)"
+              />
+            </div>
+          </div>
+          <!-- Portfolio Item 6 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="portfolio1-card">
+              <img
+                src="https://i.postimg.cc/9MQYQv9w/1-47.jpg"
+                class="portfolio1-image"
+                onclick="openModal(this)"
+              />
+            </div>
+          </div>
+          <!-- Portfolio Item 6 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="portfolio1-card">
+              <img
+                src="https://i.postimg.cc/pTrLTZLL/1-5.jpg"
+                class="portfolio1-image"
+                onclick="openModal(this)"
+              />
+            </div>
+          </div>
+          <!-- Portfolio Item 6 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="portfolio1-card">
+              <img
+                src="https://i.postimg.cc/wvrTsm1c/1-6.jpg"
+                class="portfolio1-image"
+                onclick="openModal(this)"
+              />
+            </div>
+          </div>
+          <!-- Portfolio Item 6 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="portfolio1-card">
+              <img
+                src="https://i.postimg.cc/Dmkvx3dS/1-7.jpg"
+                class="portfolio1-image"
+                onclick="openModal(this)"
+              />
+            </div>
+          </div>
+          <!-- Portfolio Item 6 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="portfolio1-card">
+              <img
+                src="https://i.postimg.cc/1XNR036x/1-8.jpg"
+                class="portfolio1-image"
+                onclick="openModal(this)"
+              />
+            </div>
+          </div>
+          <!-- Portfolio Item 6 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="portfolio1-card">
+              <img
+                src="https://i.postimg.cc/KcLRg051/1-9.jpg"
+                class="portfolio1-image"
+                onclick="openModal(this)"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal for Image Preview -->
+    <div id="imageModal" class="modal">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img class="modal-content" id="modalImage" />
+    </div>
+
+    <script>
+      function openModal(imgElement) {
+        var modal = document.getElementById("imageModal");
+        var modalImg = document.getElementById("modalImage");
+        var body = document.body;
+
+        modal.style.display = "flex";
+        modalImg.src = imgElement.src;
+
+        // Add class to hide navbar
+        body.classList.add("modal-open");
+      }
+
+      function closeModal() {
+        var modal = document.getElementById("imageModal");
+        var body = document.body;
+
+        modal.style.display = "none";
+
+        // Remove class to show navbar again
+        body.classList.remove("modal-open");
+      }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
